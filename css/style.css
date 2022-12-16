@@ -1,0 +1,122 @@
+/* Start Globle Style */
+:root {
+    --part-one:hsl(31, 77%, 52%);
+    --part-two:hsl(184, 100%, 22%);
+    --part-three:hsl(179, 100%, 13%);
+    --paragraphs-color:hsla(0, 0%, 100%, 0.75);
+    --bkg-hed-btm-color:hsl(0, 0%, 95%);
+    --brd-radius:15px;
+    --padding:30px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bkg-hed-btm-color);
+}
+/* End Globle Style */
+/* Start Card Style*/
+main {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+@media (max-width:767px) {
+    main {
+        flex-direction: column;
+        width: 700px;
+        margin: 25px;
+        margin-top: 80px;
+    }
+}
+section {
+    padding: 50px;
+    color: var(--bkg-hed-btm-color);
+    position: relative;
+    padding-bottom: 100px;
+}
+.sedans {
+    background-color: var(--part-one);
+    border-top-left-radius: var(--brd-radius);
+    border-bottom-left-radius: var(--brd-radius);
+}
+.suvs {
+    background-color: var(--part-two);
+}
+.luxury {
+    background-color: var(--part-three);
+    border-top-right-radius: var(--brd-radius);
+    border-bottom-right-radius: var(--brd-radius);
+}
+
+@media (max-width:767px) {
+    .sedans {
+        border-top-left-radius: var(--brd-radius);
+        border-top-right-radius: var(--brd-radius);
+        border-bottom-left-radius:0;
+    }
+    .luxury {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: var(--brd-radius);
+        border-bottom-left-radius: var(--brd-radius);
+    }
+}
+
+section h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 35px;
+    padding-top: var(--padding);
+    padding-bottom: 30px;
+}
+section p {
+    color: var(--paragraphs-color);
+    width: 80%;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    padding-bottom: 80px;
+}
+
+@media (max-width:767px){
+    section p {
+        width: 90%;
+        padding-bottom: 50px;
+    }
+}
+
+section a {
+    position: absolute;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: var(--bkg-hed-btm-color);
+    border: var(--bkg-hed-btm-color) solid 2px;
+    padding: 15px 35px;
+    border-radius: 30px;
+    transition: .3s;
+}
+.sedans a {
+    color: var(--part-one);
+}
+.suvs a {
+    color: var(--part-two);
+}
+.luxury a {
+    color: var(--part-three);
+}
+
+section a:hover{
+    background-color: transparent;
+    color: var(--bkg-hed-btm-color);
+    border: var(--bkg-hed-btm-color) solid 2px;
+}
+
+/* End Card  Style*/
